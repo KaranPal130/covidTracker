@@ -2,5 +2,12 @@
     <h1 class="display-4">Covid Tracker</h1>
     <p class="lead">You'll find the details of how many people have gotten infected by this grave virus</p>
     <hr class="my-4">
-    <p>Graphs and charts</p>
+   <div class="mx-auto">
+    <div class="form-group">
+        <label for="c">Select Country</label>
+        <select name="" class="form-control" id="c">
+            <option value="con" *ngFor='let con of countries'>{{con}}</option>
+        </select>
+    </div>
+   </div>
 </div>

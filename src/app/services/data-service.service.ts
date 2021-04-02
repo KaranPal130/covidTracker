@@ -7,7 +7,7 @@ import { dataSummary } from'../models/data'
 })
 export class DataServiceService {
 
-  private dataUrl = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-31-2021.csv"
+  private dataUrl = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-01-2021.csv"
   constructor(private http: HttpClient) { }
 
   getData(){
@@ -47,8 +47,8 @@ export class DataServiceService {
               
             })
 
-            console.log(raw);
-            return[];
+            
+            return <dataSummary[]> Object.values(raw);
         })
       )
   }
